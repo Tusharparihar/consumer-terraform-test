@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "terraform"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    # Only check Git-based modules; ignore any provider version bumps
+    ignore:
+      - dependency-name: "hashicorp/*"
+      - dependency-name: "azure/*"
+      - dependency-name: "azurerm"
+      - dependency-name: "*"
+        dependency-type: "direct"
