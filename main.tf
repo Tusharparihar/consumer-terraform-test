@@ -3,7 +3,7 @@ variable "azure_region" {
 }
 
 module "azure_region" {
-  source       = "git::https://github.com/YOUR-USERNAME/terraform-azurerm-regions-test.git?ref=v1.3.0"
+  source       = "git::https://github.com/Tusharparihar/terraform-azurerm-regions-test.git?ref=v1.3.0"
   azure_region = var.azure_region
 }
 
