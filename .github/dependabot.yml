@@ -4,10 +4,9 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    # Only check Git-based modules; ignore any provider version bumps
+    # Ignore Terraform provider updates — only check module git refs
     ignore:
       - dependency-name: "hashicorp/*"
-      - dependency-name: "azure/*"
       - dependency-name: "azurerm"
+      - dependency-name: "azure/*"
       - dependency-name: "*"
-        dependency-type: "direct"
